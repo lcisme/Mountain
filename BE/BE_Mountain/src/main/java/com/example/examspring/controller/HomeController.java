@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/destination")
 public class HomeController {
-    
+
     @Autowired
     private HomeService homeService;
 
