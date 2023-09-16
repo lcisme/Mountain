@@ -1,4 +1,5 @@
 import 'package:http/http.dart' as http;
+import 'package:tripsmountain/models/destination_model.dart';
 import 'dart:convert';
 import '../models/welcome_model.dart';
 
@@ -17,5 +18,19 @@ class DataServices {
       print(e);
     }
     return <WelcomeModel>[];
+  }
+
+  Future<List<DestinationModel>> getInfoDestination() async {
+    String subUrl = "/getAll";
+    http.Response response = await http.get(Uri.parse(baseUrl + subUrl));
+    try {
+      if (response.statusCode == 200) {
+        List<dynamic> list = json.decode(response.body);
+        return list.map((e) => DestinationModel.fromJson(e)).toList();
+      }
+    } catch (e) {
+      print(e);
+    }
+    return <DestinationModel>[];
   }
 }

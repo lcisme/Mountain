@@ -28,4 +28,14 @@ class AppCubits extends Cubit<CubitStates> {
       print(e);
     }
   }
+  // homepage
+  void getAllDestination() async {
+    try {
+      emit(LoadingState());
+      welcome = await dataServices.getInfoDestination();
+      emit(HomeLoadedState(destinations: destinations));
+    } catch (e) {
+      print(e);
+    }
+  }
 }

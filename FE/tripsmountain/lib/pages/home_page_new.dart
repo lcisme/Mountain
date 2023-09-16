@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tripsmountain/core/constant/dimension_constant.dart';
 import 'package:tripsmountain/core/extention/text_style_ext.dart';
-import 'package:tripsmountain/pages/search_result_page.dart';
 import 'package:tripsmountain/widgets/app_bar_container.dart';
 
 import '../core/helper/ImageHelper.dart';

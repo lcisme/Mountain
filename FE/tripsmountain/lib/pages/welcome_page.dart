@@ -41,7 +41,6 @@ class _WelcomePageState extends State<WelcomePage> {
                           //set full screen
                           width: double.maxFinite,
                           height: double.maxFinite,
-                          //padding: EdgeInsets.only(),
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(welcome[index].image),
@@ -88,7 +87,7 @@ class _WelcomePageState extends State<WelcomePage> {
                                     GestureDetector(
                                       onTap: () {
                                          Navigator.of(context).pushNamed(MainPage.routeName);
-                                        // BlocProvider.of<AppCubits>(context).getAllWelcomes();
+                                        // BlocProvider.of<AppCubits>(context).getAllDestination();
                                       },
                                       child: ButtonNext(
                                         width: 100,
