@@ -21,7 +21,7 @@ class DataServices {
   }
 
   Future<List<DestinationModel>> getInfoDestination() async {
-    String subUrl = "/getAll";
+    String subUrl = "/destination/getAll";
     http.Response response = await http.get(Uri.parse(baseUrl + subUrl));
     try {
       if (response.statusCode == 200) {
